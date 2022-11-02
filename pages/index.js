@@ -1,51 +1,18 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const left = 10;
   return (
-    <div className=" bg-blue-400 w-screen h-screen flex justify-center items-center">
-      <div className=" w-1/3 h-5/6 bg-yellow-400 shadow-2xl flex flex-col items-center">
-        <div className="bg-yellow-400 shadow-2xl w-44 h-44 rounded-full mt-8 flex justify-center items-center">
-          <img src="./images/user.png" alt="user" className="w-1/2 h-1/2" />
-        </div>
-        <div className="flex justify-center my-8 gap-4">
-          <img src="./icons/twitter.png" alt="twitter" className="w-8 h-8" />
-          <img src="./icons/github.png" alt="github" className="w-8 h-8" />
-          <img
-            src="./icons/pinterest.png"
-            alt="pinterest"
-            className="w-8 h-8"
-          />
-          <img src="./icons/facebook.png" alt="facebook" className="w-8 h-8" />
-        </div>
-        <div className="grid grid-cols-2 gap-20">
-          <div className="text-center text-xl">
-            <div className="font-bold ">51</div>
-            <div>Upvoted</div>
-          </div>
-          <div className="text-center text-xl">
-            <div className="font-bold ">51</div>
-            <div>Upvoted</div>
-          </div>
-          <div className="text-center text-xl">
-            <div className="font-bold ">51</div>
-            <div>Upvoted</div>
-          </div>
-          <div className="text-center text-xl">
-            <div className="font-bold ">51</div>
-            <div>Upvoted</div>
-          </div>
-          <div className="text-center text-xl">
-            <div className="font-bold ">51</div>
-            <div>Upvoted</div>
-          </div>
-          <div className="text-center text-xl">
-            <div className="font-bold ">51</div>
-            <div>Upvoted</div>
-          </div>
-        </div>
+    <div className="w-screen h-screen bg-gray-100 flex flex-col justify-center items-center">
+      <div className="w-full h-96 bg-orange-200 rounded border-8 border-white relative">
+        <div
+          className={`absolute w-24 h-24 rounded-full bg-white border-4 border-red-400 left-${left} top-10`}
+        ></div>
       </div>
+      <button>Up</button>
+      <button>Down</button>
+      <button>Right</button>
+      <button>Left</button>
     </div>
   );
 }
